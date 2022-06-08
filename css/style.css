@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*Imports - El import de las media queries lo hice abajo de todo porque si no no me funcionaba*/
+.grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto .btn, .grid__contacto .contacto__formulario form .btn {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  background-color: #cf56cf;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  color: #080808; }
+
+/*Reset y propiedades generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: radial-gradient(circle, white 20%, #d5d3d3 100%); }
+
+/* Al <main> le di display contents porque fue el único modo que encontré para que no me rompiera el flujo*/
+main {
+  display: contents; }
+
+/* Grid y Propiedades del HEADER (incluye el navbar de bootstrap)*/
+.header {
+  grid-area: header; }
+  .header .navbar {
+    background-color: #080808; }
+    .header .navbar div .navbar-toggler-icon {
+      background-image: url(../img/icons/menu.jpg); }
+  .header .navbar-collapse {
+    flex-grow: 0;
+    margin-right: 80px; }
+    .header .navbar-collapse ul li .nav-link {
+      color: whitesmoke; }
+    .header .navbar-collapse ul li .nav-link:hover {
+      font-weight: bold;
+      color: #CC8FCC;
+      border-bottom: 2px solid #CC8FCC; }
+
+/* Grid y propiedades del HOME */
+.grid__home {
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 100vh 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: column;
+  grid-template-areas: "header" "main__home" "footer"; }
+
+.main__home {
+  grid-area: main__home;
+  background-image: url(../img/fondoHome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: radial-gradient(circle, white 20%, #d5d3d3 100%);
+  display: flex; }
+  .main__home .texto {
+    position: relative;
+    font-size: 1.3rem;
+    text-align: right;
+    font-style: oblique;
+    margin-top: 25vh;
+    margin-left: 5rem; }
+    .main__home .texto p {
+      margin-bottom: 0px;
+      color: #2b052e; }
+
+/*Grid y Porpiedades de NOSOTRAS*/
+.grid__nosotras {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto 65vh auto;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas: "header header header" "titulo titulo titulo" "nosotras__texto nosotras__texto nosotras__imagen" "footer footer footer";
+  background: radial-gradient(circle, white 20%, #d5d3d3 100%); }
+  .grid__nosotras .nosotras__texto {
+    grid-area: nosotras__texto;
+    display: flex; }
+    .grid__nosotras .nosotras__texto .nosotras__texto-texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 15%;
+      padding-right: 5%;
+      font-size: 1.2rem;
+      text-align: right;
+      color: #2b052e;
+      font-weight: 600; }
+  .grid__nosotras .nosotras__imagen {
+    grid-area: nosotras__imagen;
+    display: flex;
+    align-items: center; }
+
+.titulo {
+  grid-area: titulo;
+  height: fit-content;
+  margin-top: 70px;
+  padding-left: 50px;
+  padding-top: 10px; }
+  .titulo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #080808; }
+
+/*propiedades del grid TIENDA*/
+.grid__tienda {
+  display: grid;
+  height: auto;
+  grid-template-areas: "header" "titulo" "main__tienda" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto; }
+  .grid__tienda .main__tienda {
+    grid-area: main__tienda;
+    display: flex;
+    justify-content: center;
+    height: auto; }
+    .grid__tienda .main__tienda .main__tienda__contenedor {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center; }
+      .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto {
+        width: 10rem;
+        border: solid 1px #acacac;
+        margin: 1rem;
+        cursor: pointer; }
+        .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto img {
+          width: 100%; }
+        .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto p {
+          text-align: center;
+          padding: 0.2rem;
+          margin-bottom: 0px; }
+        .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto .tienda__fila__producto-precio {
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: #cf56cf; }
+        .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto .tienda__fila__producto-descripcion {
+          font-weight: bold; }
+        .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto .tienda__fila__producto-financiacion {
+          font-size: 0.7rem;
+          background-color: #CC8FCC;
+          color: whitesmoke; }
+
+/*propiedades del grid galeria*/
+.grid__galeria {
+  display: grid;
+  height: auto;
+  grid-template-areas: "header" "titulo" "container__carrousel" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto 80vh auto;
+  background-color: whitesmoke; }
+
+.container__carrousel {
+  grid-area: container__carrousel;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px; }
+  .container__carrousel .carousel {
+    width: 80%;
+    margin: auto; }
+
+/*propiedades del grid contacto*/
+.grid__contacto {
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 65vh auto;
+  column-gap: 2rem;
+  grid-template-areas: "header header" "titulo titulo" "contacto__contacto contacto__formulario" "footer footer"; }
+  .grid__contacto .contacto__formulario {
+    justify-self: start;
+    align-self: center;
+    grid-area: contacto__formulario;
+    width: 70%;
+    padding-bottom: 50px; }
+    .grid__contacto .contacto__formulario form div h2 {
+      color: whitesmoke; }
+    .grid__contacto .contacto__formulario form div .label {
+      text-align: left; }
+    .grid__contacto .contacto__formulario form div .form-control {
+      border-radius: 0px; }
+    .grid__contacto .contacto__formulario form .btn-primary:hover {
+      background-color: #d603d6;
+      color: #CC8FCC; }
+  .grid__contacto .contacto__contacto {
+    justify-self: center;
+    align-self: center;
+    grid-area: contacto__contacto;
+    text-align: justify;
+    color: whitesmoke; }
+    .grid__contacto .contacto__contacto div div p img {
+      margin-right: 10px; }
+
+.fondo__contacto {
+  background-color: #2a2a2a; }
+  .fondo__contacto .titulo__pagina-contacto h1 {
+    color: whitesmoke;
+    font-size: 2rem; }
+
+/*propiedades del footer*/
+footer {
+  grid-area: footer;
+  background-color: #080808;
+  width: 100%;
+  color: whitesmoke;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly; }
+  footer div {
+    width: 25%;
+    padding: 1.5rem; }
+    footer div a {
+      color: whitesmoke; }
+  footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem; }
+  footer .footer__medioPago {
+    width: 70%; }
+
+/*Inicio media query 800*******************************************************************************/
+@media screen and (max-width: 800px) {
+  /*GALERIA*/
+  /*NOSOTRAS*/
+  .grid__nosotras {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "titulo" "nosotras__imagen" "nosotras__texto" "footer";
+    justify-content: space-evenly; }
+    .grid__nosotras .nosotras__imagen {
+      display: flex;
+      justify-content: center; }
+      .grid__nosotras .nosotras__imagen img {
+        height: 80vh; }
+    .grid__nosotras .nosotras__texto .nosotras__texto-texto {
+      justify-content: center;
+      padding: 0px;
+      margin-bottom: 5%; }
+      .grid__nosotras .nosotras__texto .nosotras__texto-texto p {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center; }
+  /*FOOTER*/
+  .mediosPago {
+    display: none; } }
+
+/*Inicio media query 480*******************************************************************************/
+@media screen and (max-width: 480px) {
+  /*HOME*/
+  .main__home {
+    background-image: url(../img/fondoHomeTablet.jpg); }
+    .main__home .texto {
+      background-color: rgba(8, 8, 8, 0.5);
+      height: fit-content;
+      width: 100%;
+      margin-left: 0px;
+      padding: 20px;
+      margin-top: 65vh; }
+      .main__home .texto p {
+        color: whitesmoke; }
+  /*NOSOTRAS*/
+  .nosotras__texto-texto {
+    margin-bottom: 5%; }
+  /*TIENDA*/
+  .grid__tienda .main__tienda .main__tienda__contenedor {
+    width: 100%; }
+  /*CONTACTO*/
+  .grid__contacto {
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "titulo" "contacto__contacto" "contacto__formulario" "footer"; }
+    .grid__contacto .contacto__contacto {
+      justify-self: start;
+      padding-left: 15%;
+      grid-area: contacto__contacto;
+      margin-top: 10%;
+      margin-bottom: 5%; }
+    .grid__contacto .contacto__formulario {
+      justify-self: center;
+      grid-area: contacto__formulario; }
+      .grid__contacto .contacto__formulario form div h2 {
+        text-align: center; }
+  /*FOOTER*/
+  footer div {
+    width: 75%; } }

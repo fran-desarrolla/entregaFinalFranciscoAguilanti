@@ -1,0 +1,145 @@
+/*Inicio media query 800*******************************************************************************/
+@media screen and (max-width:800px) {
+    /*GALERIA*/
+
+
+
+
+    /*NOSOTRAS*/
+    .grid__nosotras {  
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-auto-rows: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto auto auto; 
+       grid-template-areas: 
+          "header"
+          "titulo"
+          "nosotras__imagen"
+          "nosotras__texto"
+           "footer"; 
+        justify-content: space-evenly; 
+        .nosotras__imagen{
+            display:flex;
+            justify-content: center;
+            img{
+                height: 80vh;
+            }
+        }
+        .nosotras__texto{
+            .nosotras__texto-texto{
+                justify-content: center;
+                padding: 0px;
+                margin-bottom: 5%;
+           
+                p{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    text-align: center;
+                    
+                }
+                         
+            }   
+        }
+        
+        
+    }
+
+   
+   
+
+    /*FOOTER*/
+
+    .mediosPago {
+        display: none;
+    } 
+    
+
+
+
+
+    
+}
+
+/*Inicio media query 480*******************************************************************************/
+@media screen and (max-width:480px) {
+
+/*HOME*/
+    .main__home{
+    background-image: url(../img/fondoHomeTablet.jpg);
+    .texto{
+        background-color: $bg-color__texto;
+               height: fit-content;
+        width: 100%;
+        margin-left:0px;
+        padding:20px;
+        margin-top:65vh;
+        p{
+            color:$color__contacto;
+        }
+    } 
+}
+   
+/*NOSOTRAS*/
+   .nosotras__texto-texto{
+       margin-bottom: 5%;
+   } 
+
+
+/*TIENDA*/
+
+.grid__tienda{
+    .main__tienda{
+        .main__tienda__contenedor{
+                       width:100%
+        }
+    }
+}
+/*CONTACTO*/
+
+.grid__contacto {  
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "titulo"
+      "contacto__contacto"
+      "contacto__formulario"
+      "footer";
+      .contacto__contacto {
+        justify-self: start;
+        padding-left:15%;
+        grid-area: contacto__contacto;
+        margin-top: 10%;
+        margin-bottom: 5%;
+      }
+      
+      .contacto__formulario {
+        justify-self: center;
+        grid-area: contacto__formulario;
+        form{
+            div{
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+      } 
+  }
+   
+ 
+  
+  /*FOOTER*/
+
+  footer{
+      div{
+          width:75%;
+      }
+  }
+  
+
+
+}
+        
+
+
