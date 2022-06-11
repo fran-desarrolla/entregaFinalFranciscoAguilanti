@@ -55,7 +55,7 @@
     } 
     
 
-
+   
 
 
     
@@ -79,9 +79,26 @@
         }
     } 
 }
-   
+
+
+/*GALERIA*/  
+
+.grid__galeria {
+    grid-template-rows: auto auto 50vh auto;
+    
+}
+
+.container__carrousel {
+       .carousel {
+        width: 100%;
+        
+    }
+}
+
+
 /*NOSOTRAS*/
-   .nosotras__texto-texto{
+
+  .nosotras__texto-texto{
        margin-bottom: 5%;
    } 
 
@@ -134,6 +151,10 @@
   footer{
       div{
           width:75%;
+      }
+
+      h2{
+          font-size:$fz-h2-m;
       }
   }
   

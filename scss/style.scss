@@ -7,6 +7,7 @@
 * {
     @include reset;
     font-family: 'Nunito', sans-serif;
+    
 }
 
 a {
@@ -202,6 +203,13 @@ main {
 
                 .btn {
                     @extend %boton;
+                    
+                }
+
+                .btn:hover{
+                    color:$color__button-hover;
+                    border-radius: 30px;
+                    
                 }
             }
         }
