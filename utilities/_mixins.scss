@@ -26,3 +26,8 @@
     display: grid;
     height: auto;
 }
+
+@mixin btn-hover {
+    color:$color__button-hover;
+    border-radius: 30px;
+}

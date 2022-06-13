@@ -80,7 +80,7 @@ main {
   display: grid;
   height: auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto 65vh auto;
+  grid-template-rows: auto auto 80vh auto;
   gap: 0px 0px;
   grid-auto-flow: column;
   grid-template-areas: "header header header" "titulo titulo titulo" "nosotras__texto nosotras__texto nosotras__imagen" "footer footer footer";
@@ -182,7 +182,7 @@ main {
   display: grid;
   height: auto;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto 65vh auto;
+  grid-template-rows: auto auto 80vh auto;
   column-gap: 2rem;
   grid-template-areas: "header header" "titulo titulo" "contacto__contacto contacto__formulario" "footer footer"; }
   .grid__contacto .contacto__formulario {
@@ -197,6 +197,9 @@ main {
       text-align: left; }
     .grid__contacto .contacto__formulario form div .form-control {
       border-radius: 0px; }
+    .grid__contacto .contacto__formulario form .btn:hover {
+      color: whitesmoke;
+      border-radius: 30px; }
     .grid__contacto .contacto__formulario form .btn-primary:hover {
       background-color: #d603d6;
       color: #CC8FCC; }
@@ -264,8 +267,8 @@ footer {
   .mediosPago {
     display: none; } }
 
-/*Inicio media query 480*******************************************************************************/
-@media screen and (max-width: 480px) {
+/*Inicio media query 649**Esta query se crea especialmente para evitar que entre los 649px y los 480 px el texto del index quede superpuesto con la cara de la modelo y por lo tanto pierda visibilidad. */
+@media screen and (max-width: 649px) {
   /*HOME*/
   .main__home {
     background-image: url(../img/fondoHomeTablet.jpg); }
@@ -277,7 +280,10 @@ footer {
       padding: 20px;
       margin-top: 65vh; }
       .main__home .texto p {
-        color: whitesmoke; }
+        color: whitesmoke; } }
+
+/*Inicio media query 480*******************************************************************************/
+@media screen and (max-width: 480px) {
   /*GALERIA*/
   .grid__galeria {
     grid-template-rows: auto auto 50vh auto; }
@@ -289,6 +295,8 @@ footer {
   /*TIENDA*/
   .grid__tienda .main__tienda .main__tienda__contenedor {
     width: 100%; }
+    .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto {
+      width: 80%; }
   /*CONTACTO*/
   .grid__contacto {
     grid-template-rows: auto auto auto auto auto;
