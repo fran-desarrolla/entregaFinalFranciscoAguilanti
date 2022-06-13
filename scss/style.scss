@@ -1,13 +1,13 @@
-/*Imports - El import de las media queries lo hice abajo de todo porque si no no me funcionaba*/
+//Imports - El import de las media queries lo hice abajo de todo porque si no no me funcionaba
 @import "utilities/variables";
 @import "utilities/mixins";
 @import "utilities/extend";
 
-/*Reset y propiedades generales*/
+//Reset y propiedades generales
 * {
     @include reset;
     font-family: 'Nunito', sans-serif;
-    
+
 }
 
 a {
@@ -117,7 +117,7 @@ main {
     .nosotras__texto {
         grid-area: nosotras__texto;
         display: flex;
-       
+
 
         .nosotras__texto-texto {
             display: flex;
@@ -135,7 +135,7 @@ main {
     .nosotras__imagen {
         grid-area: nosotras__imagen;
         @include flex-align-center;
-        
+
     }
 }
 
@@ -205,12 +205,12 @@ main {
 
                 .btn {
                     @extend %boton;
-                    
+
                 }
 
-                .btn:hover{
+                .btn:hover {
                     @include btn-hover;
-                    
+
                 }
             }
         }
@@ -266,7 +266,7 @@ main {
             div {
                 h2 {
                     color: $color__contacto;
-                                        
+
                 }
 
                 .label {
@@ -282,7 +282,7 @@ main {
                 @extend %boton;
             }
 
-            .btn:hover{
+            .btn:hover {
                 @include btn-hover;
             }
 

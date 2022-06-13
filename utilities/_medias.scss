@@ -1,9 +1,5 @@
 /*Inicio media query 800*******************************************************************************/
 @media screen and (max-width:800px) {
-    /*GALERIA*/
-
-
-
 
     /*NOSOTRAS*/
     .grid__nosotras {
@@ -48,48 +44,41 @@
 
     }
 
-
-
-
     /*FOOTER*/
 
     .mediosPago {
         display: none;
     }
 
-
-
-
-
-
 }
 
 /*Inicio media query 649**Esta query se crea especialmente para evitar que entre los 649px y los 480 px el texto del index quede superpuesto con la cara de la modelo y por lo tanto pierda visibilidad. */
 @media screen and (max-width:649px) {
-/*HOME*/
-.main__home {
-    background-image: url(../img/fondoHomeTablet.jpg);
 
-    .texto {
-        background-color: $bg-color__texto;
-        height: fit-content;
-        width: 100%;
-        margin-left: 0px;
-        padding: 20px;
-        margin-top: 65vh;
+    /*HOME*/
+    .main__home {
+        background-image: url(../img/fondoHomeTablet.jpg);
 
-        p {
-            color: $color__contacto;
+        .texto {
+            background-color: $bg-color__texto;
+            height: fit-content;
+            width: 100%;
+            margin-left: 0px;
+            padding: 20px;
+            margin-top: 65vh;
+
+            p {
+                color: $color__contacto;
+            }
         }
     }
-}
 
 }
 
 /*Inicio media query 480*******************************************************************************/
 @media screen and (max-width:480px) {
 
-     /*GALERIA*/
+    /*GALERIA*/
 
     .grid__galeria {
         grid-template-rows: auto auto 50vh auto;

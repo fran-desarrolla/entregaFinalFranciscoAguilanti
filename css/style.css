@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*Imports - El import de las media queries lo hice abajo de todo porque si no no me funcionaba*/
-/*Font size footer movil*/
 .grid__tienda .main__tienda .main__tienda__contenedor .tienda__fila__producto .btn, .grid__contacto .contacto__formulario form .btn {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -11,7 +9,6 @@
   width: 100%;
   color: #080808; }
 
-/*Reset y propiedades generales*/
 * {
   margin: 0;
   padding: 0;
@@ -240,7 +237,6 @@ footer {
 
 /*Inicio media query 800*******************************************************************************/
 @media screen and (max-width: 800px) {
-  /*GALERIA*/
   /*NOSOTRAS*/
   .grid__nosotras {
     display: grid;
